@@ -3,7 +3,7 @@ public class Laba2 {
         // Завдання 1: a = -1.49, b = 23.4, c = 1.23, d = 2.542
         double a1 = -1.49, b1 = 23.4, c1 = 1.23, d1 = 2.542;
         double y1 = Math.sqrt(Math.abs(Math.sin(a1) - (4 * Math.log(b1)) / Math.pow(c1, d1)));
-        System.out.println("Завдання 1: y = " + y1);
+        System.out.println("Завдання qweq 1: y = " + y1);
 
         // Завдання 2: a = 2.34, b = 0.756, c = 2.23, d = -1.653
         double a2 = 2.34, b2 = 0.756, c2 = 2.23, d2 = -1.653;
