@@ -7,6 +7,7 @@ public class Task1 {
         printResults(-1, 5);    // помилка: m <= 0
     }
 
+    // Метод для обчислення суми ряду
     public static double seriesSum(int m, int k) {
         if (m <= 0) {
             throw new IllegalArgumentException("param m = " + m + " (must be > 0)");
@@ -17,17 +18,16 @@ public class Task1 {
 
         double sum = 0.0;
         for (int i = 1; i <= k; i++) {
-            double term = m * (1.0 / i) * Math.sin(m * i);
-            if (term < 0) {
-                throw new IllegalArgumentException("sqrt of negative value at i=" + i);
-            }
-            sum += Math.sqrt(term);
+            // Формула: S += sqrt(m / i) * sin(m * i)
+            double term = Math.sqrt((double) m / i) * Math.sin(m * i);
+            sum += term;
         }
         return sum;
     }
 
+    // Метод для виведення результатів з обробкою винятків
     static void printResults(int m, int k) {
-        System.out.print("m:" + m + " k:" + k + " result:");
+        System.out.print("m:" + m + " k:" + k + " result: ");
         try {
             System.out.println(seriesSum(m, k));
         } catch (IllegalArgumentException e) {
